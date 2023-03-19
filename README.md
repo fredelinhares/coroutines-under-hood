@@ -130,7 +130,9 @@ suspend fun buttonHandler(callback: CPS) {
 }
 ```
 
-- The code above is passing a continuation function (here a callback) as an argument to another function. In other words, instead of returning a result, the function calls The buttonHandler function takes a continuation function callback as an argument, which will be called when the function completes its operation.
+A little bit about the code above:
+
+- A continuation function (here a callback) is send as an argument to another function. In other words, instead of returning a result, the function calls The buttonHandler function takes a continuation function callback as an argument, which will be called when the function completes its operation.
 - The buttonHandler is an asynchronous function that performs two operations sequentially. 
 - First, it calls the lookup function with a parameter value of 5. 
 - The lookup function takes a callback function that will be called with the result of the lookup. In this case, the callback function launches a coroutine that calls the setField function with the result value and the callback function.
@@ -166,6 +168,7 @@ Each state corresponds to a different phase of the coroutine's execution and rep
 
 > More deeply…
 
+```kotlin
 suspend fun getUser(): User?
 suspend fun setUser(user: User)
 suspend fun checkAvailability(flight: Flight): Boolean
@@ -174,6 +177,7 @@ suspend fun checkAvailability(flight: Flight): Boolean
 fun getUser(continuation: Continuation<*>): Any?
 fun setUser(user: User, continuation: Continuation<*>): Any
 fun checkAvailability( flight: Flight,  continuation: Continuation<*>): Any
+```
 
 - The result type under the hood is different from the originally declared one.  The reason is that a suspending function might be suspended, and so it might not return a declared type.
 - It returns a special COROUTINE_SUSPENDED marker
