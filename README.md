@@ -2,7 +2,7 @@
 
 It is necessary to point out that much of the text below is taken from the article written by [Marcin Moskała](https://kt.academy/article/cc-under-the-hood) 
 
-* Key lessons are:
+Key lessons are:
 * Suspending functions are like state machines, with a possible state at the beginning of the function and after each suspending function call.
 * Both the number identifying the state and the local data are kept in the continuation object.
 * Continuation of a function decorates a continuation of its caller function; as a result, all these continuations represent a call stack that is used when we resume or a resumed function completes.
