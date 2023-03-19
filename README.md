@@ -7,7 +7,7 @@ Key lessons are:
 * Both the number identifying the state and the local data are kept in the continuation object.
 * Continuation of a function decorates a continuation of its caller function; as a result, all these continuations represent a call stack that is used when we resume or a resumed function completes.
 
-Key word #1 - Continuation-passing style (CPS)
+Continuation-passing style (CPS)
 
 Continuation-passing style (CPS) is a way of writing computer programs that helps programmers control the order in which different tasks are carried out. In CPS, every step of the program is designed to say what needs to happen next, which makes it easier to build complex programs.  
 
