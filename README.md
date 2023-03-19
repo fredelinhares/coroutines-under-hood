@@ -1,6 +1,6 @@
 ## Coroutines under the hood
 
-It is necessary to point out that much of the text below is taken from the article written by [Marcin Moskała](https://kt.academy/article/cc-under-the-hood) 
+It is necessary to point out that much of the text below is taken from the article written by [Marcin Moskała](https://kt.academy/article/cc-under-the-hood).
 
 Key lessons are:
 * Suspending functions are like state machines, with a possible state at the beginning of the function and after each suspending function call.
