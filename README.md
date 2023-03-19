@@ -203,7 +203,9 @@ myFunction function signature will look under the hood —> fun myFunction(cont
 - myFunction will wrap the continuation (the parameter) with its own continuation (MyFunctionContinuation): val continuation = MyFunctionContinuation(continuation) 
 - This should be done only if the continuation isn't wrapped already: if it is, this is part of the resume process, and we should keep the continuation unchanged:
 
+```kotlin
 val continuation =  if (continuation is MyFunctionContinuation) continuation else MyFunctionContinuation(continuation)
+```
 
 This condition can be simplified to: val continuation = continuation as? MyFunctionContinuation  ?: MyFunctionContinuation(continuation)
 
