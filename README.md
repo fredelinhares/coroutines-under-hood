@@ -162,43 +162,7 @@ Each state corresponds to a different phase of the coroutine's execution and rep
 
 * State machine for buttonHandler function:
 
-  +--------------+
-  | Initializing |
-  +--------------+
-         |
-         | invoke lookup function with parameter=5
-         V
-  +-----------------+
-  | Waiting for data |
-  +-----------------+
-         |
-         | receive data from lookup function
-         V
-  +-----------------+
-  | Calling setField |
-  +-----------------+
-         |
-         | invoke setField function with data and callback
-         V
-  +----------------+
-  | Waiting for set |
-  +----------------+
-         |
-         | receive callback from setField function
-         V
-  +------------+
-  | Calling cb  |
-  +------------+
-         |
-         | invoke callback
-         V
-  +-------------+
-  | Exiting      |
-  +-------------+
-
-——————————————————————————————————————————————————————————————————————————————————————————
-************************************************************************************************************************************************************************
-——————————————————————————————————————————————————————————————————————————————————————————
+ ![Alt Text](./images/state_machine.png)
 
 > More deeply…
 
