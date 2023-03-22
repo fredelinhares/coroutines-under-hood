@@ -583,7 +583,7 @@ public final class CoroutinesUnderTheHoodKt {
 }
 ```
 	      
-#Doubts that may arise from the text read.
+## Doubts that may arise from the text read.
 1. How does the Kotlin compiler transform suspending functions into a state machine representation, allowing for suspension and resumption at specific points in the code? 
 2. How does the Kotlin coroutine system ensure that the call stack is unwound when a coroutine is suspended, allowing for efficient resource usage on the thread?
 3. How do structured concurrency principles apply to Kotlin coroutines, and how do they help to prevent common concurrency pitfalls such as resource leaks and orphaned coroutines?
