@@ -13,7 +13,7 @@ Continuation-passing style (CPS) is a way of writing computer programs that help
 
 Coroutines uses CPS. Why?
 
-The reason why coroutines use CPS is that it provides a way to save and restore the state of a coroutine, including the values of its local variables and the point in the execution where it was suspended. This is necessary because when a coroutine is suspended, its execution context is stored, and when it is resumed, that context needs to be restored.
+The reason why coroutines use CPS is that it provides a way to save and restore the state of a coroutine, including the values of its local variables and the point in the execution where it was suspended. This is necessary because when a coroutine is suspended, its execution context is stored, and when it is resumed, that context needs to be restored:
 
 * CPS achieves this by turning the program's control flow into a continuation function that represents the remainder of the program's execution after a particular point.
 
