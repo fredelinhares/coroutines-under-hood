@@ -583,6 +583,22 @@ public final class CoroutinesUnderTheHoodKt {
 }
 ```
 	      
+#Doubts that may arise from the text read.
+1. How does the Kotlin compiler transform suspending functions into a state machine representation, allowing for suspension and resumption at specific points in the code? 
+2. How does the Kotlin coroutine system ensure that the call stack is unwound when a coroutine is suspended, allowing for efficient resource usage on the thread?
+3. How do structured concurrency principles apply to Kotlin coroutines, and how do they help to prevent common concurrency pitfalls such as resource leaks and orphaned coroutines?
+4. What is the role of the Continuation-Passing Style (CPS) transformation in the Kotlin coroutine system, and how does it enable non-blocking asynchronous code execution?
+5. How does Kotlin's CoroutineDispatcher abstraction allow for flexible execution of coroutines across different thread pools or other execution contexts?
+6. How do Kotlin's non-blocking primitives like delay, yield, and withTimeout interact with the coroutine machinery to provide cooperative multitasking?
+7. What is the performance impact of using coroutines compared to traditional blocking code or other concurrency models such as Java's CompletableFuture?
+8. How does the Kotlin compiler optimize the creation and usage of Continuation objects to minimize the overhead of coroutine suspension and resumption?
+9. In what ways do Kotlin's reified type parameters aid in retaining type information for Continuation objects at runtime, and what benefits does this provide in terms of type safety? 
+10. How does the Kotlin coroutine system achieve fairness when scheduling coroutines for execution, ensuring that no single coroutine monopolizes the available resources?
+11. What is the mathematical basis for the coroutine state machine, and how does this relate to formalisms like Finite State Machines or Petri nets?
+12. How does the Kotlin coroutine system manage memory and avoid memory leaks, particularly when dealing with large numbers of suspended coroutines and associated Continuation objects?
+	      
+	      
+	      
 ## References
 
 - https://kt.academy/article/cc-under-the-hood
