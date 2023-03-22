@@ -4,7 +4,7 @@ Introduction
 
 Coroutines are a programming abstraction that allows multiple independent execution contexts to be interleaved within a single thread of execution. One common way to implement coroutines is by using Continuation Passing Style (CPS).
 
-Attention point: it is necessary to point out that much of the text below is taken from a great article written by [Marcin Moskała](https://kt.academy/article/cc-under-the-hood).
+⚠️ Attention point: it is necessary to point out that much of the text below is taken from a great article written by [Marcin Moskała](https://kt.academy/article/cc-under-the-hood).
 
 Continuation-passing style (CPS)
 
