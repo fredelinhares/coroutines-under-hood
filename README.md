@@ -94,7 +94,7 @@ suspend fun lookup(parameter: Int): Int {
 
 suspend fun buttonHandler() {
 	val parameter = 5 
-	val result = withContext(Dispatchers.IO) {
+	val result = withContext(Dispatchers.Main) {
     	lookup(parameter)
 	}
 	setField(result)
@@ -127,7 +127,7 @@ suspend fun lookup(parameter: Int, callback: (Int) -> Unit) {
 
 suspend fun buttonHandler(callback: CPS) {
 	val parameter = 5
-	withContext(Dispatchers.IO) {
+	withContext(Dispatchers.Main) {
 		lookup(parameter) { result ->
 			launch { setField(result, callback) }
 		}
